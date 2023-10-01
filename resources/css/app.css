@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .link-navbar {
+        @apply hover:bg-[#121520] hover:text-[#ffffff] p-2 rounded-md text-[#676e8a];
+    }
+}
