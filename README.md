@@ -12,4 +12,27 @@ Este repositório foi criado com o propósito de documentar tópicos que geralme
 
 - **Introdução ao Regex para Noobs**: Aprenda os conceitos básicos das expressões regulares.
 
+Modelagem do blog, simples e compacta:
 
+```mermaid
+classDiagram
+
+class Author {
+    uuid
+    string: name
+    string: password 
+}
+
+class Article {
+    uuid
+    string:  title
+    text: document
+    string: source
+    bytea: banner
+    timestamp: post_data
+    bool: is_active
+}
+
+ Author "1" *-- "N" Article
+
+```

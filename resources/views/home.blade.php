@@ -11,8 +11,8 @@
         <img src="img/jayp.png" alt="foto de perfil" class="w-28 rounded-full drop-shadow-xl">
         <nav>
             <ul class="flex items-center justify-between w-[300px] ">
-                <li class="link-navbar w-[80px] text-center"><a href="#">Sobre</a></li>
-                <li class="link-navbar w-[80px] text-center"><a href="./artigo">Artigos</a></li>
+                <li class="link-kznavbar w-[80px] text-center"><a href="#">Sobre</a></li>
+                <li class="link-navbar w-[80px] text-center"><a href="./article">Artigos</a></li>
                 <li class="link-navbar w-[80px] text-center"><a href="./portifolio">Portifólio</a></li>
             </ul>
         </nav>
@@ -40,7 +40,6 @@
                         <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">João Vitor P. Martins</h1>
                         <p class="mt-6 text-xl leading-8 text-gray-700">Desenvolvedor versátil capaz de resolver problemas. Minha experiência e conhecimento em diversas tecnologias e metodologias de desenvolvimento me permitem adaptar-me facilmente a diferentes projetos e ambientes de trabalho.</p>
                         <ul role="list" class="mt-8 space-y-2 text-gray-600">
-                            <li><strong>Email:</strong> jpereiramartinsdev@gmail.com</li>
                             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joao-pereira-7736b320b/">João Pereira</a></li>
                             <li><strong>Github:</strong> <a href="https://github.com/jayp-xgh">Jayp</a></li>
                         </ul>
@@ -54,9 +53,10 @@
                 <div class="lg:pr-4">
                     <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
                         <p><strong>Experiência:</strong></p>
-                        <p>Turim - tempo integral - nov 2022 até o momento</p>
+                        <p>Turim - tempo integral - nov de 2022 - out de 2023 · 1 ano</p>
                         <p>
-                            Trabalho na área de sustentação, dando suporte para sistema legado em PHP, JavaScript e framework próprio, aplicando boas práticas de refatoração como testes, clean code, SOLID e design patterns.
+                            Trabalhei na área de sustentação, dando suporte para sistema legado em
+                            PHP, JavaScript e framework próprio, aplicando boas práticas de Refatoração, TESTES, Clean Code, SOLID, Hexagonal, DDD e Design Patterns.
                         </p>
                         <br>
                         <p><strong>Formação:</strong></p>
@@ -111,6 +111,14 @@
                         <img src="img/mysql.svg" class="h-16 w-16">
                         <div>
                             <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">MySQL</h3>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-x-6">
+                        <img src="img/django.svg" class="h-16 w-16">
+                        <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Django</h3>
                         </div>
                     </div>
                 </li>
