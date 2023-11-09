@@ -22,6 +22,14 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
 
+        // $request->validate([
+        //     'title' => 'required',
+        //     'title' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        //     'title' => 'required',
+        //     'title' => 'required',
+        // ]);
+
+
         $article = new Article;
      
         $file_name = time() . '.' . request()->image->getClientOriginalExtension();
