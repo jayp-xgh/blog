@@ -10,10 +10,9 @@
     <div class="flex items-center justify-center  h-[300px] flex-col gap-5">
         <img src="img/jayp.png" alt="foto de perfil" class="w-28 rounded-full drop-shadow-xl">
         <nav>
-            <ul class="flex items-center justify-between w-[300px] ">
-                <li class="link-kznavbar w-[80px] text-center"><a href="#">Sobre</a></li>
-                <li class="link-navbar w-[80px] text-center"><a href="./article">Artigos</a></li>
-                <li class="link-navbar w-[80px] text-center"><a href="./portifolio">Portifólio</a></li>
+            <ul class="flex items-center justify-between w-[250px] ">
+                <li class="link-navbar w-[80px] text-center"><a href="#">Sobre</a></li>
+                <li class="link-navbar w-[80px] text-center"><a href="{{ route('articles.index') }}">Artigos</a></li>
             </ul>
         </nav>
     </div>

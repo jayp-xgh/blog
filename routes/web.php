@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ArticleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/article', function () {
-    return view('article');
-});
-Route::get('/portifolio', function () {
-    return view('portifolio');
-});
-Route::get('/publish', function () {
-    return view('publish');
-});
+
+Route::resource('articles', ArticleController::class);
+
