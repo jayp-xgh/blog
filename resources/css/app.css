@@ -6,4 +6,11 @@
     .link-navbar {
         @apply hover:bg-[#121520] hover:text-[#ffffff] p-2 rounded-md text-[#676e8a];
     }
+    .ck-editor__editable {
+        @apply min-h-[300px];
+ 
+    }
+    .ck-editor__editable > p {
+        @apply pl-[20px];
+    }
 }
