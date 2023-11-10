@@ -13,27 +13,58 @@ class ArticleController extends Controller
         $articles = Article::orderby('created_at', 'desc')->get();
         return view('articles.index', ['articles' => $articles]);
     }
+    public function show($id)
+    {
+        $article = Article::findOrFail($id);
+        return view('articles.show', ['article' => $article]);
+    }
 
     public function create()
     {
         return view('articles.create');
     }
 
+    public function edit($id)
+    {
+        $article = Article::findOrFail($id);
+        return view('articles.edit', ['article' => $article]);
+    }
+    public function update(Request $request, Article $article)
+    {
+        $request->validate([
+            'title' => 'required',
+        ]);
+
+        $file_name = $request->hidden_article_image;
+
+        if($request->image){
+            $file_name = time() . '.' . request()->image->getClientOriginalExtension();
+            request()->image->move(public_path('img/articles'), $file_name);
+        }
+        $article = Article::find($request->hidden_id);
+        $article->title = $request->title;
+        $article->document = $request->document;
+        $article->source = $request->source;
+        $article->image = $file_name;
+
+        $article->save();
+
+        return redirect()->route('articles.index')->with('success', 'Article updated successfully.');
+
+    }
     public function store(Request $request)
     {
 
-        // $request->validate([
-        //     'title' => 'required',
-        //     'title' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        //     'title' => 'required',
-        //     'title' => 'required',
-        // ]);
-
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'document' => 'required',
+        ]);
 
         $article = new Article;
      
         $file_name = time() . '.' . request()->image->getClientOriginalExtension();
-        request()->image->move(public_path('images'), $file_name);
+        request()->image->move(public_path('img/articles'), $file_name);
  
         $article->title = $request->title;
         $article->document = $request->document;
@@ -42,7 +73,20 @@ class ArticleController extends Controller
 
 
         $article->save();
-        
         return redirect()->route('articles.index')->with('success', 'Article added successfully.');
+    }
+
+    public function destroy($id)
+    {
+        $article = Article::findOrFail($id);
+        $image_path = public_path().'/img/articles/';
+        $image = $image_path . $article->image;
+        
+        if(file_exists($image)){
+           @unlink($image); 
+        }
+        
+        $article->delete();
+        return redirect()->route('articles.index')->with('success', 'Article deleted successfully.');
     }
 }
