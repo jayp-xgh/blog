@@ -12,9 +12,9 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);
-            $table->string('source', 255);
+            $table->string('source', 255)->nullable();
             $table->text('document');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });

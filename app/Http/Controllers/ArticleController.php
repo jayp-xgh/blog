@@ -8,6 +8,10 @@ use App\Models\Article;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['create', 'edit', 'update', 'destroy']);
+    }
     public function index()
     {
         $articles = Article::orderby('created_at', 'desc')->get();
@@ -35,13 +39,15 @@ class ArticleController extends Controller
             'title' => 'required',
         ]);
 
-        $file_name = $request->hidden_article_image;
+        $file_name = $article->image;
 
         if($request->image){
+            @unlink(public_path('img/articles/'.$article->image));
             $file_name = time() . '.' . request()->image->getClientOriginalExtension();
             request()->image->move(public_path('img/articles'), $file_name);
         }
-        $article = Article::find($request->hidden_id);
+
+
         $article->title = $request->title;
         $article->document = $request->document;
         $article->source = $request->source;
