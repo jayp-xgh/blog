@@ -69,10 +69,6 @@
             }
         }
 
-        function closeToast() {
-            var toast = document.getElementById('toast-notification');
-            toast.style.display = 'none';
-        }
     </script>
 </body>
 </html>

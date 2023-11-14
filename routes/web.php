@@ -8,6 +8,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Route::resource('articles', ArticleController::class);
 
 Route::view('/login', 'login.form')->name('login.form');

@@ -9,9 +9,16 @@
     @vite('resources/css/app.css')
     <title>Artigos</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto Mono', monospace;
+        }
+        strong {
+            color: #619ce5;
+            font-size: 1.5rem;
+        }
+        i {
+            color: rgb(136, 193, 234);
         }
         h2, h3, p {
             padding-bottom: 15px; 
@@ -19,8 +26,9 @@
         h1 {
             font-size: 2.25rem;
             font-weight: 800;
-            color: #e9edf0;
-            padding-bottom:56px ;
+            color:#ffffff;
+            padding-bottom:56px;
+            line-height: 1.5;
         }
         h2, h3 {
             font-size: 1.5rem;
@@ -29,15 +37,8 @@
         }
         p {
             font-size: 1.5rem;
-            color: #9ea9b6;
+            color: #676e8a;
             line-height: 1.2;
-        }
-        strong {
-            color: #619ce5;
-            font-size: 1.5rem;
-        }
-        i {
-            color: rgb(136, 193, 234);
         }
     </style>
 </head>
