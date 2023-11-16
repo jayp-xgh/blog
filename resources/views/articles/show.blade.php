@@ -14,7 +14,7 @@
             --main-font: 'Merriweather', serif;
             --strong-color: #e96b32;
             --italic-color: #92c0dd;
-            --heading-color: #2f85f3;
+            --heading-color: #fff;
             --heading-h2-h3-color: #71db8c;
             --paragraph-color: #768390;
             --background-color: #22272e;
@@ -55,7 +55,7 @@
         p, a{
             font-size: 1.5rem;
             color: var(--paragraph-color);
-            line-height: 1.2;
+            line-height: 1.5;
         }
         h1,h2,h3,h4,h5,h6,p {
             padding-bottom: 10px;
@@ -66,7 +66,7 @@
 
 <body class="min-h-[100vh]">
     <x-go-back-button />
-    <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 antialiased flex flex-col justify-center items-center">
+    <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 antialiased flex flex-col justify-center items-center ">
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl w-[100%]">
             <article
                 class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
@@ -84,7 +84,7 @@
             </article>
         </div>
         <div
-            class=" w-[50%] pt-[100px] flex flex-col justify-center items-start text-base text-gray-500 dark:text-gray-400">
+            class=" w-[80%] pt-[100px] flex flex-col justify-center items-start text-base text-gray-500 dark:text-gray-400">
             <h1 class="w-[100%]">{{ $article->title }}</h1>
             {!! $article->document !!}
         </div>
