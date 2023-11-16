@@ -84,7 +84,7 @@
             </article>
         </div>
         <div
-            class=" w-[80%] pt-[100px] flex flex-col justify-center items-start text-base text-gray-500 dark:text-gray-400">
+            class=" w-[70%] pt-[100px] flex flex-col justify-center items-start text-base text-gray-500 dark:text-gray-400">
             <h1 class="w-[100%]">{{ $article->title }}</h1>
             {!! $article->document !!}
         </div>
