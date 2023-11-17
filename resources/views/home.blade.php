@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>About</title>
 </head>
 <body class="bg-[#1b1e2c]">
     <div class="flex items-center justify-center  h-[300px] flex-col gap-5">
@@ -39,8 +39,8 @@
                         <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">João Vitor P. Martins</h1>
                         <p class="mt-6 text-xl leading-8 text-gray-700">Desenvolvedor versátil capaz de resolver problemas. Minha experiência e conhecimento em diversas tecnologias e metodologias de desenvolvimento me permitem adaptar-me facilmente a diferentes projetos e ambientes de trabalho.</p>
                         <ul role="list" class="mt-8 space-y-2 text-gray-600">
-                            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joao-pereira-7736b320b/">João Pereira</a></li>
-                            <li><strong>Github:</strong> <a href="https://github.com/jayp-xgh">Jayp</a></li>
+                            <li><a href="https://www.linkedin.com/in/joao-pereira-7736b320b/" class="hover:text-indigo-600"><strong>LinkedIn:</strong> João Pereira</a></li>
+                            <li><a href="https://github.com/jayp-xgh" class="hover:text-indigo-600"><strong>Github: </strong>Jayp</a></li>
                         </ul>
                     </div>
                 </div>
@@ -115,17 +115,17 @@
                 </li>
                 <li>
                     <div class="flex items-center gap-x-6">
-                        <img src="img/django.svg" class="h-16 w-16">
+                        <img src="img/adobeXD.svg" class="h-16 w-16">
                         <div>
-                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Django</h3>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">AdobeXD</h3>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="flex items-center gap-x-6">
-                        <img src="img/adobeXD.svg" class="h-16 w-16">
+                        <img src="img/github.svg" class="h-16 w-16">
                         <div>
-                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">AdobeXD</h3>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Github | Git</h3>
                         </div>
                     </div>
                 </li>
