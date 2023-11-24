@@ -33,12 +33,13 @@
                 
                 <a href="{{ route('articles.show', $article->id) }}" lass="mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
                     <h1 class="mb-4 text-1xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-2xl dark:text-white">{{ $article->title }}</h1>
-                </a>
-                <br>
-                <time class="mb-2 block text-md font-normal leading-none text-gray-400 dark:text-gray-500">Publicado em {{ $article->created_at }}</time>
+                
+                    <br>
+                    <time class="mb-2 block text-md font-normal leading-none text-gray-400 dark:text-gray-500">Publicado em {{ $article->created_at }}</time>
 
-                <br>
-                <img src="{{ asset('img/articles/' . $article->image) }}" width="500px">
+                    <br>
+                    <img src="{{ asset('img/articles/' . $article->image) }}" width="500px">
+                </a>
                 <br>
 
                 @auth
